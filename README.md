@@ -5,7 +5,11 @@
 
 Минимальный набор инструментов, который нужен для создания своего видеоплеера. Все элементы можно кастомизировать на свой вкус и цвет.
 
+[Пример плеера](https://duke-doki.github.io/video-player-jslib/)
+
 ![max example](screenshots/max.gif)
+
+
 
 Построен на базе библиотеки [Playable](https://wix.github.io/playable/).
 
