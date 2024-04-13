@@ -11,6 +11,7 @@
       background-color:transparent;
       width:25px;
       height:25px;
+      margin:5px;
     }
     i.text {
       color: white;
@@ -18,9 +19,14 @@
     }
     div.buttons-background {
       background-color: black;
+      display: flex;
+      flex-direction: row;
     }
     div.container-borders {
       flex-grow: 1;
+    }
+    div.buttons-gap {
+      flex-grow: 1
     }
     div.player-borders {
       width: 800px; height: 600px;
@@ -45,6 +51,10 @@
       </button>
       <button class="js-mute-button frame">
         <i class="fa fa-volume-up text" aria-hidden="true"></i>
+      </button>
+      <div class="buttons-gap"></div>
+      <button class="js-fullscreen-button frame">
+        <i class="fa fa-expand text" aria-hidden="true"></i>
       </button>
     </div>
   </div>
