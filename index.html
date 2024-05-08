@@ -5,6 +5,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
   <link rel="icon" type="image/x-icon" href="static/favicon.ico">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+        rel="stylesheet">
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <style type="text/css">
@@ -29,13 +33,37 @@
       flex-grow: 1;
     }
     .buttons-gap {
-      flex-grow: 1
+      flex-grow: 1;
+
     }
     .player-borders {
       width: 800px; height: 600px;
       box-shadow: 0 0 10px rgba(0,0,0,1);
       display: flex;
       flex-direction: column;
+    }
+    .roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .duration {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .duration-box {
+      margin: 2px;
+      width:50px;
+      height:18px;
+    }
+    .duration-line {
+      margin: 8px;
+    }
+    .text-duration {
+      color: white;
+      font-size: 100%;
     }
   </style>
 </head>
@@ -55,7 +83,19 @@
       <button class="js-mute-button frame">
         <i class="fa fa-volume-up text" aria-hidden="true"></i>
       </button>
-      <div class="buttons-gap"></div>
+
+        <div class="buttons-gap  duration">
+          <div class="duration-box">
+            <span class="js-current-time roboto-regular text-duration"></span>
+          </div>
+          <div class="buttons-gap duration-box duration-line">
+            <span class="roboto-regular text-duration">poloska</span>
+          </div>
+          <div class="duration-box">
+            <span class="js-duration roboto-regular text-duration"></span>
+          </div>
+        </div>
+
       <button class="js-fullscreen-button frame">
         <i class="fa fa-expand text" aria-hidden="true"></i>
       </button>
@@ -68,8 +108,6 @@
   <script type="text/javascript">
     createPlayer({elementId: 'player'});
   </script>
-
-
 
 </body>
 </html>
