@@ -85,11 +85,18 @@
       border-style: solid;
       border-width: 3px;
       border-color: white;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
       box-shadow: 0 0 10px rgba(0,0,0,1)
     }
     .circle-config {
-      margin-right: 5px;
+      margin-left: -7px;
       margin-top: 4px;
+    }
+    .progress-background:hover .duration-circle {
+      opacity: 1;
     }
   </style>
 </head>
