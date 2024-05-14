@@ -55,7 +55,7 @@
   height: 5px;
   border-radius: 5px;
 }
-.duration-circle {
+.slider-circle {
   height: 8px;
   width: 8px;
   background-color: red;
@@ -72,6 +72,6 @@
   margin-left: -7px;
   margin-top: 1px;
 }
-.vp-player__progress__bar:hover .duration-circle {
+.vp-player__progress__bar:hover .slider-circle {
   opacity: 1;
 }
