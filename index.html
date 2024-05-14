@@ -10,133 +10,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
         rel="stylesheet">
   <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
-  <style type="text/css">
-    .player-borders {
-      width: 800px; height: 600px;
-      box-shadow: 0 0 10px rgba(0,0,0,1);
-      display: flex;
-      flex-direction: column;
-    }
-    .container-borders {
-      flex-grow: 1;
-    }
-    .buttons-background {
-      background-color: black;
-      display: flex;
-      flex-direction: row;
-    }
-    .frame {
-      border-style:none;
-      cursor:pointer;
-      background-color:transparent;
-      width:29px;
-      height:37px;
-      margin:4px;
-    }
-    .text {
-      color: white;
-      font-size: 150%
-    }
-    .buttons-gap {
-      flex-grow: 1;
-    }
-    .roboto-regular {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-    .duration {
-      background-color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .duration-box {
-      margin: 2px;
-      width:50px;
-      height:18px;
-    }
-    .text-duration {
-      color: white;
-      font-size: 100%;
-    }
-    .progress-background {
-      background-color: grey;
-      height: 5px;
-      border-radius: 5px;
-      margin-left: 10px;
-      margin-bottom: 1px;
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-    }
-    .progress-slider {
-      background-color: red;
-      height: 5px;
-      border-radius: 5px;
-    }
-    .duration-circle {
-      height: 8px;
-      width: 8px;
-      background-color: red;
-      border-radius: 50%;
-      display: inline-block;
-      border-style: solid;
-      border-width: 3px;
-      border-color: white;
-      opacity: 0;
-      transition-property: opacity;
-      transition-duration: 300ms;
-      transition-timing-function: ease-in-out;
-      box-shadow: 0 0 10px rgba(0,0,0,1)
-    }
-    .circle-config {
-      margin-left: -7px;
-      margin-top: 4px;
-    }
-    .progress-background:hover .duration-circle {
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
-  <div class="player-borders" id="player">
-    <div class="js-video-container container-borders"></div>
-    <div class="buttons-background">
-      <button class="js-play-button frame">
-        <i class="fa fa-play text" aria-hidden="true"></i>
+  <div class="vp-player" id="player">
+    <div class="js-video-container vp-player__display"></div>
+    <div class="vp-player__controls">
+      <button class="js-play-button vp-player__button">
+        <i class="fa fa-play" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button frame">
-        <i class="fa fa-pause text" aria-hidden="true"></i>
+      <button class="js-pause-button vp-player__button">
+        <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-      <button class="js-volume-button frame">
-        <i class="fa fa-volume-off text" aria-hidden="true"></i>
+      <button class="js-volume-button vp-player__button">
+        <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button frame">
-        <i class="fa fa-volume-up text" aria-hidden="true"></i>
+      <button class="js-mute-button vp-player__button">
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
 
-
-      <div class="buttons-gap duration">
-        <div class="duration-box">
-          <span class="js-current-time roboto-regular text-duration"></span>
+      <div class="vp-player__progress">
+        <div class="vp-player__progress__time">
+          <span class="js-current-time"></span>
         </div>
-        <div class="js-progress duration-box progress-background">
-            <div class="js-progress-slider progress-slider">
-            </div>
-            <div class="circle-config">
-              <span class="duration-circle"></span>
-            </div>
+        <div class="js-progress vp-player__progress__bar">
+            <div class="js-progress-slider vp-player__progress__slider"></div>
+            <div class="duration-circle"></div>
         </div>
-        <div class="duration-box">
-          <span class="js-duration roboto-regular text-duration"></span>
+        <div class="vp-player__progress__time">
+          <span class="js-duration"></span>
         </div>
       </div>
 
-      <button class="js-fullscreen-button frame">
-        <i class="fa fa-expand text" aria-hidden="true"></i>
+      <button class="js-fullscreen-button vp-player__button">
+        <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
   </div>
